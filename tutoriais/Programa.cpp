@@ -1,5 +1,9 @@
 #include<stdio.h>
-#include<conio.h>
+
+#ifdef __WIN32
+#	include<conio.h>
+#endif
+
 #include<stdlib.h>
 
 main(){
