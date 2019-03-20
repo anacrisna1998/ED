@@ -1,6 +1,12 @@
 #include <stdio.h>
-int main(){
-	
+
+#ifdef __WIN32
+#	include <conio.h>
+#endif
+
+int
+main()
+{
 	char nome[50];
 	char amigo_do_dono;
 	int idade;
@@ -36,5 +42,9 @@ int main(){
 			break;
 		}
 	}
+#ifdef __WIN32
+	getch()
+#elif __unix
 	return 0;
+#endif
 }
